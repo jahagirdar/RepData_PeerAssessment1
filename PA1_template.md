@@ -112,6 +112,7 @@ print(summary1)
 ## ..        ...         ...        ...          ...
 ```
 
+
 * Make a histogram of the total number of steps taken each day
 
 ```r
@@ -185,8 +186,8 @@ Calculate and report the total number of missing values in the dataset (i.e. the
 
 *A:* Total of 2304 rows have missing values in the dataset.
 
-*Q:* Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc. Create a new dataset that is equal to the original dataset but with the missing data filled in.
-*A:* We will be using the mean of the interval group.
+*Q:* Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc. Create a new dataset that is equal to the original dataset but with the missing data filled in.  
+*A:* We will be using the mean of the interval group to fill in the missing values..
 
 
 ```r

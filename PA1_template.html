@@ -369,8 +369,8 @@ print(summary1)
 
 <p><em>A:</em> Total of 2304 rows have missing values in the dataset.</p>
 
-<p><em>Q:</em> Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc. Create a new dataset that is equal to the original dataset but with the missing data filled in.
-<em>A:</em> We will be using the mean of the interval group.</p>
+<p><em>Q:</em> Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc. Create a new dataset that is equal to the original dataset but with the missing data filled in.<br/>
+<em>A:</em> We will be using the mean of the interval group to fill in the missing values..</p>
 
 <pre><code class="r">new_activity&lt;-activity%&gt;%
     group_by(interval)%&gt;%
