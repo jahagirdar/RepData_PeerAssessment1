@@ -1,10 +1,5 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-author: Vijayvithal
-output: 
-  html_document:
-    keep_md: true
----
+# Reproducible Research: Peer Assessment 1
+Vijayvithal  
 
 ```r
 # Loading basic libraries
@@ -111,9 +106,10 @@ print(summary1)
 ## 10 2012-10-12       17382   60.35417            0
 ## ..        ...         ...        ...          ...
 ```
+* The mean of total steps is `mean(summary1$Total_Steps)` 1.0766189\times 10^{4}
+* The median of total steps is `median(summary1$Total_Steps)` 10765
 
-
-* Make a histogram of the total number of steps taken each day
+*Q:* Make a histogram of the total number of steps taken each day
 
 ```r
 ggplot(summary1,aes(x=Total_Steps))+geom_histogram()
@@ -123,7 +119,7 @@ ggplot(summary1,aes(x=Total_Steps))+geom_histogram()
 ## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
 
 ## What is the average daily activity pattern?
 
@@ -159,7 +155,7 @@ sum1<-activity1 %>%
   ggplot(sum1,aes(x=interval,y=Average_steps))+geom_line()
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
 
 ```r
   max_row=head(arrange(sum1,desc(Average_steps)),1)
@@ -210,7 +206,7 @@ hist(sum1$Total_steps,breaks=20)
 hist(summary1$Total_Steps,breaks=20)
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
 
 *A:* We find that the pattern changes slightly after filling in the missing value.
 
@@ -229,7 +225,7 @@ ggplot(factored,aes(x=steps))+geom_histogram()+facet_wrap(~weekday)
 ## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
 
 *Q:* Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 
@@ -241,4 +237,4 @@ ggplot(factored,aes(x=steps))+geom_histogram()+facet_wrap(~weekday)
 ggplot(aes(x=interval,y=Average_steps))+geom_line()+facet_wrap(~ weekday)
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 

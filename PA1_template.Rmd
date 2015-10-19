@@ -47,9 +47,10 @@ summary1<-activity1%>%
 print(summary1)
 
 ```
+* The mean of total steps is `mean(summary1$Total_Steps)` `r mean(summary1$Total_Steps)`
+* The median of total steps is `median(summary1$Total_Steps)` `r median(summary1$Total_Steps)`
 
-
-* Make a histogram of the total number of steps taken each day
+*Q:* Make a histogram of the total number of steps taken each day
 ```{r}
 ggplot(summary1,aes(x=Total_Steps))+geom_histogram()
 ```
